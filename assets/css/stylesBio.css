@@ -1,0 +1,302 @@
+	/*Main Setup For Bio
+	Based off Classes UoN and sites referenced in README..*/
+
+/* Resets Attributes to zero */
+/* References Setting All Atributes - http://www.w3schools.com/cssref/sel_all.asp*/
+*{
+	margin: 0;
+	padding: 0;
+	/* This allows all boxes to start the same size i reference them as - http://www.w3schools.com/cssref/css3_pr_box-sizing.asp */
+	box-sizing: border-box;
+}
+/* Sets Font class and size of text with colour */
+html{
+	font: normal 16px sans-serif;
+	color: #555;
+}
+/* Leaves the list styling of navigation links to none */
+ul, nav{
+	list-style: none;
+}
+/* Link Styling */
+a{
+	cursor: pointer;
+	color: inherit;
+	opacity: 0.9;
+	text-decoration: none;
+}
+a:hover{
+	opacity: 1;
+}
+a.btn{
+	color: #fff;
+	border-radius: 4px;
+	text-transform: uppercase;
+	background-color: #2196F3;
+	font-weight: 800;
+	text-align: center;
+}
+/* End Link Styling */
+/*The <hr> tag defines a thematic break*/
+hr{
+	width: 150px;
+	height: 2px;
+	background-color: #2196F3;
+	border: 0;
+	margin-bottom: 80px;
+}
+
+/*This is the naming convention i used for each Area also represents a css function*/
+biosection{
+	/* grows to fill the box that contains it, in the direction of the containing box's layout. */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+			-ms-flex-align: center;
+					align-items: center;
+	padding: 125px 100px;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+/* Diffrent media sizes */
+@media (max-width: 1000px){
+	biosection{
+		padding: 100px 50px;
+	}
+}
+@media (max-width: 600px){
+	biosection{
+		padding: 80px 30px;
+	}
+}
+
+/* this donates both H3 headers and class setting for titles using a . in middle*/
+biosection h3.title{
+	color: #414a4f;
+	text-transform: capitalize;
+	font: bold 32px 'Open Sans', sans-serif;
+	margin-bottom: 35px;
+	text-align: center;
+}
+/* This donates the paragrahs in each section */
+biosection p{
+	max-width: 800px;
+	text-align: center;
+	margin-bottom: 35px;
+	padding: 0 20px;
+	line-height: 2;
+}
+ul.grid{
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+ 	/*Header*/
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	color: #fff;
+	padding: 35px 100px 0;
+}
+header h2{
+	font-family: 'Quicksand', sans-serif;
+}
+header nav{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+header nav li{
+	margin: 0 15px;
+}
+header nav li:first-child{
+	margin-left: 0;
+}
+header nav li:last-child{
+	margin-right: 0;
+}
+@media (max-width: 1000px){
+	header{
+		padding: 20px 50px;
+	}
+}
+@media (max-width: 700px){
+	header{
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+	header h2{
+		margin-bottom: 15px;
+	}
+}
+
+/*headerImg Section*/
+.headerImg{
+	position: relative;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	min-height: 200px;
+	color: #fff;
+	text-align: center;
+}
+.headerImg .background-image{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-color: #2196F3;
+	z-index: -1;
+}
+.headerImg .background-image:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #414a4f;
+	opacity: 0.75;
+}
+.headerImg h1{
+	font: bold 60px 'Open Sans', sans-serif;
+	margin-bottom: 15px;
+}
+.headerImg h3{
+	font: normal 28px 'Open Sans', sans-serif;
+	margin-bottom: 40px;
+}
+
+.headerImg a.btn{
+	padding: 20px 46px;
+}
+
+@media (max-width: 800px){
+	.headerImg{
+		min-height: 600px;
+	}
+	.headerImg h1{
+		font-size: 48px;
+	}
+	.headerImg h3{
+		font-size: 24px;
+	}
+	.headerImg a.btn{
+		padding: 15px 40px;
+	}
+}
+
+
+/*biosectioninfo*/
+.biosectioninfo{
+	background-color: #f7f7f7;
+}
+.biosectioninfo .grid li{
+	padding: 0 30px;
+	-ms-flex-preferred-size: 33%;
+	    flex-basis: 33%;
+	text-align: center;
+}
+.biosectioninfo .grid li i{
+    font-size: 50px;
+    color: #2196F3;
+    margin-bottom: 25px;
+}
+.biosectioninfo .grid li h4{
+	color: #555;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+.biosectioninfo .grid li p{
+    margin: 0;
+}
+@media (max-width: 1000px){
+	.biosectioninfo .grid li{
+		-ms-flex-preferred-size: 70%;
+		    flex-basis: 70%;
+		margin-bottom: 65px;
+	}
+	.biosectioninfo .grid li:last-child{
+		margin-bottom: 0;
+	}
+}
+@media (max-width: 600px){
+	.biosectioninfo .grid li{
+		-ms-flex-preferred-size: 100%;
+		    flex-basis: 100%;
+	}
+}
+
+/*Footer*/
+footer{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	text-align: center;
+	color: #fff;
+	background-color: #414a4f;
+	padding: 60px 0;
+}
+footer ul{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin-bottom: 25px;
+	font-size: 32px;
+}
+footer ul li{
+	margin: 0 8px;
+}
+footer ul li:first-child{
+	margin-left: 0;
+}
+footer ul li:last-child{
+	margin-right: 0;
+}
+footer p{
+	text-transform: uppercase;
+	font-size: 14px;
+	color: rgba(255,255,255,0.6);
+	margin-bottom: 10px;
+}
+footer p a{
+	color: #fff;
+}
+@media (max-width: 700px){
+	footer{
+		padding: 80px 15px;
+	}
+}
